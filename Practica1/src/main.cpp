@@ -88,4 +88,6 @@ int main() {
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
 	//TODO, comprobar que la tecla pulsada es escape para cerrar la aplicación y la tecla w para cambiar a modo widwframe
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, GL_TRUE);
 }
